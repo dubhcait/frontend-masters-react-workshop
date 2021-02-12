@@ -1,3 +1,10 @@
 .scratch {
   padding: 2rem;
 }
+
+.game {
+  background: url("../scratch/pokemon-grass-background.png") repeat;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 @import './styles/exercise.scss';
 @import './styles/dots.scss';
 @import './styles/newTimer.scss';
 @import './styles/scratch.scss';
-@import './styles/alarm.scss';
+@import './styles/field.scss';
 
 *,
 *:before,
@@ -23,7 +23,7 @@ body,
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Press Start 2P', cursive;
   font-weight: 400;
   font-size: 16px;
 }
