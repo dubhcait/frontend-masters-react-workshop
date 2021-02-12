@@ -38,7 +38,7 @@ export default () => {
 
 const Field = ({ state }) => {
   switch (state) {
-    case "idle":
+    case "initial":
       return (
         <div className="field">
           <p>Hey! Did your Pokémon get any stronger? Let's find out</p>
@@ -57,7 +57,7 @@ const Field = ({ state }) => {
       );
       break;
 
-    case "initial":
+    case "idle":
       return (
         <div
           className="field"

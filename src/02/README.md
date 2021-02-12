@@ -1,6 +1,6 @@
 # Exercise 02 - Context
 
-In this exercise, we're going to use `evens` to change state rather than delayed transitions.
+In this exercise, we're going to use `events` to change state rather than delayed transitions.
 
 
 ## Goals
@@ -15,9 +15,3 @@ In this exercise, we're going to use `evens` to change state rather than delayed
 - The `FETCHED` event means we have got our pokemon and an `idle` state means we are ready to rumble. 
 
 
-After being defeated
-"Awww! You just lucked out!"
-If the player is defeated
-"Yeah! Am I great or what?"
-
-  // https://play.pokemonshowdown.com/sprites/trainers/

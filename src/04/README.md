@@ -8,3 +8,11 @@ In this exercise, we'll model what happens when the timer runs out using [guarde
 - Otherwise, the machine should transition to the `'expired'` state.
 - Parameterize the `cond`, and optionally place it in the machine's `guards` option.
 - In the `expired` state, a `RESET` event should also transition back to `idle`.
+
+
+After being defeated
+"Awww! You just lucked out!"
+If the player is defeated
+"Yeah! Am I great or what?"
+
+  // https://play.pokemonshowdown.com/sprites/trainers/
