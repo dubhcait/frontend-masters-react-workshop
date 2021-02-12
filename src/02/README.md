@@ -1,16 +1,23 @@
 # Exercise 02 - Context
 
-In this exercise, we're going to use `context` to hold extended state (state that isn't finite) and `assign(...)` to update `context` in an action.
+In this exercise, we're going to use `evens` to change state rather than delayed transitions.
+
 
 ## Goals
 
-- Add initial `context` to the machine with these values:
-  - `duration: 60` (seconds)
-  - `elapsed: 0` (seconds)
-  - `interval: 0.1` (seconds - 1/10th of a second)
-- Use the `state.context` to display the elapsed time.
-- There's a new button for adding a minute that says **+ 1:00**. Make sure that button sends an `'ADD_MINUTE'` event when it is clicked. Don't show the button unless the machine is in the `running` state.
-- When in the `running` state, the `'ADD_MINUTE'` event should trigger a transition action (in `actions`) that increments the `context.duration` by `60` seconds. Leave out the `target`; we should still be in the `running` state.
-- Whenever the machine enters the `idle` state, we should reset the `duration` and `elapsed` values to their original values.
+  - When a `LOAD` event occurs in `initial`, the machine should transition to `loading`.
+  - When a `FETCHED` event occurs in `loading`, the machine should transition to `idle`.
+  - Create buttons in the UI to `send` these events. 
 
-The end result should be that clicking **+ 1:00** should add 60 seconds to the remaining time in the UI, and clicking **Reset** should reset the remaining time to 60 seconds.
+- The `initial` state is going to represent us walking around the tall grass or having a verbal smack down with another trainer.
+- The `LOAD` event will signify the start of a battle.
+- The `loading` state is us getting our our pokemon.
+- The `FETCHED` event means we have got our pokemon and an `idle` state means we are ready to rumble. 
+
+
+After being defeated
+"Awww! You just lucked out!"
+If the player is defeated
+"Yeah! Am I great or what?"
+
+  // https://play.pokemonshowdown.com/sprites/trainers/
