@@ -4,15 +4,11 @@ In this exercise, we'll model what happens when the timer runs out using [guarde
 
 ## Goals
 
-- Whenever a `TICK` event happens, make it so that we only increment `context.elapsed` when incrementing it won't exceed the `context.duration`.
-- Otherwise, the machine should transition to the `'expired'` state.
-- Parameterize the `cond`, and optionally place it in the machine's `guards` option.
-- In the `expired` state, a `RESET` event should also transition back to `idle`.
+- Move all of the `assign(...)` actions to functions.
+- Move all your `assign(...)` functions into the actions part of the `createMachine`'s config
+- Create a service to randomly generate the pokemon's id, let's keep it to thee original 151
 
+## Resources
 
-After being defeated
-"Awww! You just lucked out!"
-If the player is defeated
-"Yeah! Am I great or what?"
-
-  // https://play.pokemonshowdown.com/sprites/trainers/
+https://xstate.js.org/docs/guides/communication.html#the-invoke-property
+https://pokeapi.co/api/v2/pokemon/{id or name}/

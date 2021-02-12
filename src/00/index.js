@@ -44,7 +44,6 @@ const Field = ({ state }) => {
           <p>Hey! Did your Pokémon get any stronger? Let's find out</p>
         </div>
       );
-      break;
 
     case "loading":
       return (
@@ -55,7 +54,6 @@ const Field = ({ state }) => {
           <p>Go Staryu!</p>
         </div>
       );
-      break;
 
     case "idle":
       return (
@@ -84,10 +82,8 @@ const Field = ({ state }) => {
           />
         </div>
       );
-      break;
 
     default:
       return "loading";
-      break;
   }
 };

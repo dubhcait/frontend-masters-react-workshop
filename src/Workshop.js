@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-// To see the final versions of each exercise, append .final to the path; 
+// To see the final versions of each exercise, append .final to the path;
 
 import Exercise00 from "./00";
 import Exercise01 from "./01";
 import Exercise02 from "./02";
-import { Timer as Exercise03 } from "./03/Timer";
-import { Timer as Exercise04 } from "./04/Timer";
-import { Timer as Exercise05 } from "./05/Timer";
+import Exercise03 from "./03";
+import Exercise04 from "./04";
+import Exercise05 from "./05";
 import { ScratchApp } from "./scratch";
 import { Exercise } from "./Exercise";
 

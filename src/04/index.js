@@ -9,7 +9,7 @@ export default () => {
   return (
     <div className="game" data-state={state}>
       <header>
-        <h1>Exercise 01</h1>
+        <h1>Exercise 04</h1>
       </header>
 
       <div className="display">
