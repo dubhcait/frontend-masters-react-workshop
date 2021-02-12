@@ -8,7 +8,7 @@ In this exercise, you're going to be creating a state machine from scratch.
 
 ## Goals
 
-- Create a state machine reducer with 3 states: `initial`, `loading`, and `idle`.
+- Create a state machine config with 3 states: `initial`, `loading`, and `idle`.
 
   - The state machine should start in the `initial` state.
   - The machine should transition to `loading` next.

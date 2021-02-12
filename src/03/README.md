@@ -1,4 +1,4 @@
-# Exercise 03 - Parameterizing Actions
+# Exercise 03 - Context
 
 In this exercise, we're going to use `context` to hold extended state (state that isn't finite) and `assign(...)` to update `context` in an action.
 

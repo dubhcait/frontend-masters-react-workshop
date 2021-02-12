@@ -1,6 +1,6 @@
-# Exercise 04 - Guarded Transitions
+# Exercise 04
 
-In this exercise, we'll model what happens when the timer runs out using [guarded transitions](https://xstate.js.org/docs/guides/guards.html).
+In this exercise, we'll play with services, these are promises that we need the results of not like our fire and forget actions.
 
 ## Goals
 
@@ -11,4 +11,5 @@ In this exercise, we'll model what happens when the timer runs out using [guarde
 ## Resources
 
 https://xstate.js.org/docs/guides/communication.html#the-invoke-property
+
 https://pokeapi.co/api/v2/pokemon/{id or name}/
