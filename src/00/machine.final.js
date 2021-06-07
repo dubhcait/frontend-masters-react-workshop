@@ -2,13 +2,13 @@ export const MachineConfig = {
   initial: "initial",
   states: {
     initial: {
-      after: {
-        1000: "loading",
+      on: {
+        START: "loading",
       },
     },
     loading: {
-      after: {
-        1000: "idle",
+      on: {
+        GO: "idle",
       },
     },
     idle: {},
