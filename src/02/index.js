@@ -3,7 +3,7 @@ import * as React from "react";
 // Import the machine and its initial state:
 // import { ... } from './machine';
 
-export default () => {
+const Exercise =  () => {
   const state = "initial"; // delete me - use state machine instead!
 
   return (
@@ -87,3 +87,6 @@ const Field = ({ state }) => {
       return "loading";
   }
 };
+
+
+export default Exercise 

@@ -9,7 +9,7 @@ import Exercise02 from "./02";
 import Exercise03 from "./03";
 import Exercise04 from "./04";
 import Exercise05 from "./05";
-import { ScratchApp } from "./scratch";
+import { PokeApp  } from "./poke";
 import { Exercise } from "./Exercise";
 
 function getMarkdownLink(exercise) {
@@ -51,8 +51,8 @@ function App() {
           </Exercise>
         </Route>
         <Route path="/">
-          <Exercise markdown={getMarkdownLink("scratch")} backLink={null}>
-            <ScratchApp />
+          <Exercise markdown={getMarkdownLink("poke")} backLink={null}>
+            <PokeApp />
           </Exercise>
         </Route>
       </Switch>

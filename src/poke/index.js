@@ -1,6 +1,6 @@
 import React from "react";
 
-export const ScratchApp = () => {
+export const PokeApp = () => {
   return (
     <div
       className="scratch"
