@@ -12,11 +12,11 @@ import Exercise05 from "./05";
 import { PokeApp  } from "./poke";
 import { Exercise } from "./Exercise";
 
-function getMarkdownLink(exercise) {
+const  getMarkdownLink = (exercise) => {
   return require(`./${exercise}/README.md`).default;
 }
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Switch>
