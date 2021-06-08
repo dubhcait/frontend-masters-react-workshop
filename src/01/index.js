@@ -9,7 +9,7 @@ const Exercise =  () => {
   return (
     <div className="game" data-state={state}>
       <header>
-        <h1>Exercise 01</h1>
+        <h1>Exercise 00</h1>
       </header>
 
       <div className="display">
@@ -87,4 +87,5 @@ const Field = ({ state }) => {
       return "loading";
   }
 };
+
 export default Exercise

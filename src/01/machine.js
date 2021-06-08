@@ -1,18 +1,7 @@
-export const MachineConfig = {
-  initial: "initial",
-  states: {
-    initial: {
-      on: {
-        START: "loading",
-      },
-    },
-    loading: {
-      on: {
-        GO: "idle",
-      },
-    },
-    idle: {},
-  },
+export const machineConfig = {
+  // ...
 };
 
+
+// Check out https://xstate.js.org/docs/guides/delays.html
 

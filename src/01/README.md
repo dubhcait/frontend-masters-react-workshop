@@ -1,10 +1,24 @@
-# Exercise 01 - Using XState
+# Exercise 01 - Pokemon battle!!
 
-In this exercise, we're going to take the machine you created and use it within [XState](https://xstate.js.org/docs) with [XState React](https://xstate.js.org/docs/packages/xstate-react/). If you created the machine using object notation, this should be pretty straightforward.
+Who doesn't love kicking their rivals butt. The aim of this workshop is to build a pokemon battle game.
+
+We'll do it step by step
+
+In this exercise, you're going to be creating a state machine from scratch.
 
 ## Goals
 
-- Install `xstate` and `@xstate/react`
-- In `machine.js`, use `createMachine(...)` to create a state machine in XState.
-- In `index.js`, use the `useMachine(...)` hook with that created machine. This should feel just like `useReducer`
-- The finite state value is now in `state.value`, so use that instead of `state`.
+- Create a state machine config with 3 states: `initial`, `loading`, and `idle`.
+
+Add 2 events `START` and `GO`.
+
+
+  - The state machine should start in the `initial` state.
+  - The machine should transition to `loading` next.
+  - Finally the machine should transition to `idle`.
+
+- The `initial` state is us before anything happens
+- `START` event is going to represent us walking around the tall grass or having a verbal smack down with another trainer.
+- The `loading` state is us getting our our pokemon.
+- `GO` event is going represent us releasing our pokemon
+- The `idle` state means we are ready to rumble.

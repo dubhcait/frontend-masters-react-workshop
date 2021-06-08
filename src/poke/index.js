@@ -3,7 +3,7 @@ import React from "react";
 export const PokeApp = () => {
   return (
     <div
-      className="scratch"
+      className="background"
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
       <img

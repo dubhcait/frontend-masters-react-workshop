@@ -1,17 +1,10 @@
-# Exercise 02 - Context
+# Exercise 02 - Using XState
 
-In this exercise, we're going to use `events` to change state rather than delayed transitions.
-
+In this exercise, we're going to take the machine you created and use it within [XState](https://xstate.js.org/docs) with [XState React](https://xstate.js.org/docs/packages/xstate-react/). If you created the machine using object notation, this should be pretty straightforward.
 
 ## Goals
 
-  - When a `LOAD` event occurs in `initial`, the machine should transition to `loading`.
-  - When a `FETCHED` event occurs in `loading`, the machine should transition to `idle`.
-  - Create buttons in the UI to `send` these events. 
-
-- The `initial` state is going to represent us walking around the tall grass or having a verbal smack down with another trainer.
-- The `LOAD` event will signify the start of a battle.
-- The `loading` state is us getting our our pokemon.
-- The `FETCHED` event means we have got our pokemon and an `idle` state means we are ready to rumble. 
-
-
+- Install `xstate` and `@xstate/react`
+- In `machine.js`, use `createMachine(...)` to create a state machine in XState.
+- In `index.js`, use the `useMachine(...)` hook with that created machine. This should feel just like `useReducer`
+- The finite state value is now in `state.value`, so use that instead of `state`.

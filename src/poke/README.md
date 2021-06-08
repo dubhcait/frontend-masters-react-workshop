@@ -14,7 +14,7 @@ The main goal is to get you writing state machines!
 
 ## Exercises
 
-- [Exercise 00](./00)
+
 - [Exercise 01](./01)
 - [Exercise 02](./02)
 - [Exercise 03](./03)

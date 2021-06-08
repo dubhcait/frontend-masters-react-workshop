@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // To see the final versions of each exercise, append .final to the path;
 
-import Exercise00 from "./00";
 import Exercise01 from "./01";
 import Exercise02 from "./02";
 import Exercise03 from "./03";
@@ -20,11 +19,6 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/00">
-          <Exercise markdown={getMarkdownLink("00")}>
-            <Exercise00 />
-          </Exercise>
-        </Route>
         <Route path="/01">
           <Exercise markdown={getMarkdownLink("01")}>
             <Exercise01 />

@@ -4,3 +4,16 @@
 border: black 4px solid;
   padding: 20px;
 }
+
+.background {
+  padding: 2rem;
+  background: url("../poke/pokemon-grass-background.png") repeat;
+}
+
+.game {
+  background: url("../poke/pokemon-grass-background.png") repeat;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
