@@ -12,18 +12,17 @@ const Exercise =  () => {
         <h1>Exercise 00</h1>
       </header>
 
-      <div className="display">
-        <div>
+    <div className="display">
+        <div style={{
+          display: 'flex'
+        }}>
           <img
             src="https://play.pokemonshowdown.com/sprites/trainers/ash.png"
             alt="Ash"
             width="250"
             height="300"
           />
-        </div>
-        <Field state={state} />
-
-        <div>
+  
           <img
             src="https://play.pokemonshowdown.com/sprites/trainers/misty-gen1.png"
             alt="Misty"
@@ -31,6 +30,7 @@ const Exercise =  () => {
             height="300"
           />
         </div>
+             <Field state={state.value}  />
       </div>
     </div>
   );

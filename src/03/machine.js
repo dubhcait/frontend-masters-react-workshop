@@ -1,48 +1,41 @@
-import { createMachine, assign } from 'xstate';
+import { createMachine, assign } from 'xstate'
 
-// Parameterize the assign actions here:
-// const tick = ...
-// const addMinute = ...
-// const reset = ...
 
-export const timerMachine = createMachine({
-  initial: 'idle',
+export const MachineConfig = {
+  initial: "initial",
   context: {
-    duration: 60,
-    elapsed: 0,
-    interval: 0.1,
+    pokemonAsh: '',
+ pokemonMisty: ''
   },
   states: {
-    idle: {
-      // Parameterize this action:
-      entry: assign({
-        duration: 60,
-        elapsed: 0,
-      }),
+    initial: {
+      on: {
+        START: "loading",
+      },
+    },
+    loading: {
+      on: {
+        GO: {
+          target:"idle",
 
-      on: {
-        TOGGLE: 'running',
-      },
-    },
-    running: {
-      on: {
-        // On the TICK event, the context.elapsed should be incremented by context.interval
-        // ...
-
-        TOGGLE: 'paused',
-        ADD_MINUTE: {
-          // Parameterize this action:
-          actions: assign({
-            duration: (ctx) => ctx.duration + 60,
-          }),
-        },
-      },
-    },
-    paused: {
-      on: {
-        TOGGLE: 'running',
-        RESET: 'idle',
-      },
-    },
+      
+      
+    },},
+    
   },
-});
+  idle: {
+         actions: [ assign({
+        pokemonAsh: () => 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png', 
+    pokemonMisty:()=> 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/120.png'})
+  ],
+  after:{
+    1000: 'fight'
+  }
+  },
+  fight:{}
+}};
+
+
+
+
+export const machine = () => createMachine(MachineConfig)

@@ -6,25 +6,23 @@ import { machine } from './machine';
 const Exercise =  () => {
   const [state, send] = useMachine(machine); // delete me - use state machine instead!
 
-  console.log(state.value, "________")
   return (
     <div className="game" data-state={state}>
       <header>
-        <h1>Exercise 01</h1>
+        <h1>Exercise 02</h1>
       </header>
 
-      <div className="display">
-        <div>
+     <div className="display">
+        <div style={{
+          display: 'flex'
+        }}>
           <img
             src="https://play.pokemonshowdown.com/sprites/trainers/ash.png"
             alt="Ash"
             width="250"
             height="300"
           />
-        </div>
-        <Field state={state.value} send={send} />
-
-        <div>
+  
           <img
             src="https://play.pokemonshowdown.com/sprites/trainers/misty-gen1.png"
             alt="Misty"
@@ -32,6 +30,7 @@ const Exercise =  () => {
             height="300"
           />
         </div>
+             <Field state={state.value} send={send} />
       </div>
     </div>
   );
