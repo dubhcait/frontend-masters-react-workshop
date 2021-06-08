@@ -1,29 +1,28 @@
 import * as React from "react";
-
+import { useMachine } from '@xstate/react';
 // Import the machine and its initial state:
-// import { ... } from './machine';
+import { machine } from './machine';
 
 const Exercise =  () => {
-  const state = "initial"; // delete me - use state machine instead!
+  const [state, send] = useMachine(machine); // delete me - use state machine instead!
 
   return (
     <div className="game" data-state={state}>
       <header>
-        <h1>Exercise 04</h1>
+        <h1>Exercise 03</h1>
       </header>
 
       <div className="display">
-        <div>
+        <div style={{
+          display: 'flex'
+        }}>
           <img
             src="https://play.pokemonshowdown.com/sprites/trainers/ash.png"
             alt="Ash"
             width="250"
             height="300"
           />
-        </div>
-        <Field state={state} />
-
-        <div>
+  
           <img
             src="https://play.pokemonshowdown.com/sprites/trainers/misty-gen1.png"
             alt="Misty"
@@ -31,21 +30,31 @@ const Exercise =  () => {
             height="300"
           />
         </div>
+             <Field state={state.value} send={send} />
       </div>
     </div>
   );
 };
 
-const Field = ({ state }) => {
+const Field = ({ state , send}) => {
   switch (state) {
-    case "initial":
+        case "initial":
       return (
         <div className="field">
-          <p>Hey! Did your Pokémon get any stronger? Let's find out</p>
+          <p>Ready?</p>
+        <button onClick={()=> send('START')}>Start</button>
         </div>
       );
 
     case "loading":
+      return (
+        <div className="field">
+          <p>Hey! Did your Pokémon get any stronger? Let's find out</p>
+                 <button onClick={()=> send('GO')}>Go</button>
+        </div>
+      );
+
+    case "idle":
       return (
         <div className="field">
           <p>Pikachu I choose you!</p>
@@ -55,13 +64,13 @@ const Field = ({ state }) => {
         </div>
       );
 
-    case "idle":
+    case "fight":
       return (
         <div
           className="field"
           style={{
             display: "flex",
-            flexDirection: "column",
+            // flexDirection: "column",
             alignItems: "center",
           }}
         >
@@ -87,5 +96,4 @@ const Field = ({ state }) => {
       return "loading";
   }
 };
-
 export default Exercise
